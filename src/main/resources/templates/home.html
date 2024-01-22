@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page - Simple Blog Website</title>
+    <link th:href="@{/style.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <div class="logo" style="text-align:left"><img th:src="@{/images/prodevans-logo.jpg}" alt="logo" height="45" width="120"></div><br>
+</header>
+<div class="content-home">
+    <h2>"Welcome to My Blogosphere🌏📝💫"</h2><br><br>
+    <div class="login"> <a th:href="@{/app/api/view-blogs}">
+        <button type="submit">Access Now</button>
+    </a>
+    </div>
+    <h4>"Explore the blogscape of the entire world and unleash your inner blogger! Dive into a world of limitless possibilities, where you can not only explore captivating blogs from every corner of the globe but also sprinkle your unique essence by adding your very own blogs into the mix – it's your time to shine in the blogosphere!" </h4>
+
+</div>
+
+<footer>
+    <p>&copy; 2023 Simple Blog Website</p>
+</footer>
+
+</body>
+</html>
+
