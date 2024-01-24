@@ -39,7 +39,6 @@ public class BlogController {
 
     @GetMapping("/view-blogs")
     public String showBlog(Model model){
-//        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
         List<Blog> blog = blogService.getAllBlogs();
         model.addAttribute("blogs",blog);
         return "view-blogs";
@@ -102,21 +101,5 @@ public class BlogController {
         mailService.sendHelpDeskEmail(message);
         return "help-desk";
     }
-//    @GetMapping("/logout")
-//    public RedirectView logout(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-//    request.logout();
-//    Cookie[] list=request.getCookies();
-//     for (Cookie cookie:list){
-//         Cookie cookie1=new Cookie(cookie.getName(),null);
-//         cookie1.setMaxAge(0);
-//         cookie1.setPath("/");
-//         response.addCookie(cookie1);
-//     }
-//        response.setHeader("pragma", "no-cache");
-//        response.setHeader("Cache-control", "no-cache, no-store, must-revalidate");
-//        response.setHeader("Expires", "0");
-//    request.getSession().invalidate();
-//    return new RedirectView("/app/api/public/home", true);
-//    }
 
 }
